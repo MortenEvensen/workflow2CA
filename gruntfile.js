@@ -1,5 +1,12 @@
 module.exports = function(grunt) {
     grunt.initConfig({
+        copy: {
+            main: {
+                expand: true,
+                src: '*html',
+                dest: 'dist/htmlCopies/',
+            },
+        },
         sass: {
             dist: {
                 files: [{
@@ -16,7 +23,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "dist/css",
-                    src: "*.css",
+                    src: ["*.css", "!*.min.css"],
                     dest: "dist/css",
                     ext: ".min.css"
                 }]
@@ -39,23 +46,32 @@ module.exports = function(grunt) {
             }
         }
         },
+         watch: {
+            css: {
+                files: "sass/styles.scss",
+                tasks: ["copy", "sass", "cssmin", "imagemin"]
+            }
+        },
         browserSync: {
             dev: {
                 bsFiles: {
                     src: [
-                        "dist/css/styles.css",
-                        "*html"
+                        "dist/css/*css",
+                        "*html",
+                        "sass/*scss"
                     ]
-                }
-            }
-        },
-        watch: {
-            css: {
-                files: "sass/styles.scss",
-                tasks: ["sass", "cssmin", "imagemin"]
+                },
+                options: {
+                    watchTask: true,
+                    server: {
+                        baseDir: "./"
+        }
+    }
             }
         }
+       
     });
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');

@@ -278,7 +278,8 @@ footer {
   right: 1em;
 }
 
-.button a:hover, .button:hover {
+.button a:hover,
+.button:hover {
   background-color: white;
   color: #646266;
   cursor: pointer;
@@ -381,7 +382,7 @@ table td {
   }
 
   .img1 {
-    background: url("images/oslo.jpg") 0 0/cover;
+    background: url("../dist/miniImages/oslo.jpg") 0 0/cover;
     height: 500px;
     background-attachment: scroll;
     background-position: center;
@@ -389,7 +390,7 @@ table td {
   }
 
   .image-about {
-    background: url("images/cycles-sun.jpg") 0 0/cover;
+    background: url("../dist/miniImages/cycles-sun.jpg") 0 0/cover;
     height: 600px;
     background-attachment: scroll;
     background-position: center;
@@ -506,7 +507,7 @@ table td {
   /* Images
   -------------*/
   .img1 {
-    background: url("images/oslo.jpg") 0 0/cover;
+    background: url("../dist/miniImages/oslo.jpg") 0 0/cover;
     height: 500px;
     background-attachment: scroll;
     background-position: center;
@@ -514,7 +515,7 @@ table td {
   }
 
   .image-about {
-    background: url("images/cycles-sun.jpg") 0 0/cover;
+    background: url("../dist/miniImages/cycles-sun.jpg") 0 0/cover;
     height: 600px;
     background-attachment: scroll;
     background-position: center;
