@@ -30,21 +30,21 @@ module.exports = function(grunt) {
             }
         },
         imagemin: {
-        static: {
+            static: {
             options: {
-                optimizationLevel: 3
-                
-            },
-            files: {
-                'dist/miniImages/oslo.jpg': 'images/oslo.jpg',
-                'dist/miniImages/bike-bridge.jpg': 'images/bike-bridge.jpg',
-                'dist/miniImages/bikers-city-bw.jpg': 'images/bikers-city-bw.jpg',
-                'dist/miniImages/cycles-sun.jpg': 'images/cycles-sun.jpg',
-                'dist/miniImages/bikes-sun.jpg': 'images/bikes-sun.jpg',
-                'dist/miniImages/oslo-kopi.jpg': 'images/oslo-kopi.jpg'
-                
+                  optimizationLevel: 3
+                  
+              },
+              files: {
+                  'dist/miniImages/oslo.jpg': 'images/oslo.jpg',
+                  'dist/miniImages/bike-bridge.jpg': 'images/bike-bridge.jpg',
+                  'dist/miniImages/bikers-city-bw.jpg': 'images/bikers-city-bw.jpg',
+                  'dist/miniImages/cycles-sun.jpg': 'images/cycles-sun.jpg',
+                  'dist/miniImages/bikes-sun.jpg': 'images/bikes-sun.jpg',
+                  'dist/miniImages/oslo-kopi.jpg': 'images/oslo-kopi.jpg'
+                  
+              }
             }
-        }
         },
          watch: {
             css: {
@@ -65,8 +65,8 @@ module.exports = function(grunt) {
                     watchTask: true,
                     server: {
                         baseDir: "./"
-        }
-    }
+                    }
+                }
             }
         }
        
@@ -79,11 +79,3 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask("default", ["browserSync", "watch"])
 }
-
-
-
-//Sass task grunt.loadNpmTasks('grunt-contrib-sass');
-//Minify CSS grunt.loadNpmTasks('grunt-contrib-cssmin');
-//Compress images grunt.loadNpmTasks('grunt-compress-images');
-// Browsersync grunt.loadNpmTasks('grunt-browser-sync');
-// watch grunt.loadNpmTasks('grunt-contrib-watch');
